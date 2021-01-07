@@ -11,6 +11,7 @@ import { CounterComponent } from './counter/counter.component';
 import { FetchDataComponent } from './fetch-data/fetch-data.component';
 import { AuthModule, AuthService } from '@auth0/auth0-angular';
 import { AuthButtonComponent } from './auth-button/app.auth-button-component';
+import { AUTH_PROVIDERS } from 'angular2-jwt';
 
 @NgModule({
   declarations: [
@@ -35,7 +36,7 @@ import { AuthButtonComponent } from './auth-button/app.auth-button-component';
       { path: 'fetch-data', component: FetchDataComponent },
     ])
   ],
-  providers: [],
+  providers: [AUTH_PROVIDERS],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
